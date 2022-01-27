@@ -1,0 +1,73 @@
+.mainHeader {
+  display: flex;
+  align-items: center;
+  width: 100vw;
+  min-height: 5rem;
+}
+
+.mainHeader a {
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.logoHeader {
+  display: flex;
+  align-items: center;
+  color: $PRIMARY_100;
+  margin-left: 1rem;
+  font-size: 2.3rem;
+  font-weight: 800;
+}
+
+.logoHeader:hover {
+  font-weight: 600;
+}
+
+.logoHeader span {
+  font-size: 1.6rem;
+  position: absolute;
+  top: 1.75rem;
+  left: 2.4rem;
+}
+
+.navHeader {
+  display: flex;
+  justify-content: center;
+  flex: 1;
+  margin-left: 3rem;
+}
+
+.navHeader > ul {
+  display: inline-flex;
+  list-style: none;
+  position: relative;
+  justify-content: space-around;
+}
+
+.listItems {
+  display: list-item;
+  text-align: -webkit-match-parent;
+}
+
+.navHeader a {
+  position: relative;
+}
+
+.navHeader span {
+  transition: color var(--duration) ease-in-out;
+  color: $PRIMARY_500;
+
+  text-transform: uppercase;
+  display: inline-block;
+  font-weight: 500;
+  letter-spacing: 0.12rem;
+  font-size: 1.2rem;
+  padding: 1.5rem;
+}
+
+.navHeader span:hover {
+  background: $WHITE_OPACITY_10;
+  border-radius: 1rem;
+  //   color: $BLACK;
+  font-weight: 600;
+}

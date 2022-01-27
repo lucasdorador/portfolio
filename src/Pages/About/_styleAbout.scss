@@ -1,0 +1,114 @@
+.aboutContent {
+  display: flex;
+  overflow: scroll;
+  overflow-x: hidden;
+  height: calc(100vh - 11rem);
+  flex-direction: column;
+  padding: 2rem 10rem;
+}
+
+.aboutContent h1 {
+  font-size: 3rem;
+  font-weight: 800;
+  margin-bottom: 1rem;
+  border-bottom: 0.1rem solid $PRIMARY_500;
+  background: linear-gradient($PRIMARY_600, $PRIMARY_100 5%, $PRIMARY_500 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.aboutContent span {
+  margin: 2rem;
+  font-size: 1.6rem;
+  color: $WHITE;
+  text-align: justify;
+}
+
+.title {
+  font-size: 2.5rem;
+  color: $WHITE;
+  font-family: $FONT-SECUNDARY;
+  border-bottom: 0.1rem double $PRIMARY_500;
+}
+
+.aboutBox {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.aboutBox span strong {
+  padding-left: 3rem;
+}
+
+.aboutBox img {
+  margin-top: 1rem;
+  width: 25rem !important;
+  height: 25rem !important;
+}
+
+.carrerBox {
+  display: flex;
+  color: $WHITE;
+  flex-direction: column;
+  padding: 1rem;
+
+  border-bottom: 0.1rem solid $PRIMARY;
+
+  line-height: 2.2rem;
+}
+
+.carrerBox strong {
+  font-size: 2rem;
+  font-weight: 800;
+}
+
+.carrerBox span {
+  margin: 0;
+}
+
+.carrerBox a {
+  color: $WHITE;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s ease-in-out;
+}
+
+.carrerBox p {
+  font-size: 1.6rem;
+  color: $WHITE;
+}
+
+@media #{$BREAKPOINT-TABLET} {
+  .aboutContent {
+    padding: 2rem 3rem;
+  }
+}
+
+@media (max-width: 530px) {
+  .aboutBox img {
+    margin-top: 1rem;
+    width: 15rem !important;
+    height: 15rem !important;
+  }
+
+  .aboutContent h1 {
+    font-size: 2rem;
+  }
+
+  .title {
+    font-size: 1.5rem;
+  }
+
+  .aboutContent span {
+    font-size: 1rem;
+  }
+
+  .carrerBox strong {
+    font-size: 1.2rem;
+  }
+
+  .carrerBox p {
+    font-size: 1rem;
+  }
+}

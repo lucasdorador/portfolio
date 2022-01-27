@@ -1,0 +1,43 @@
+/*|---------------| App Color Schema|---------------*/
+$PRIMARY: #39a75e;
+$PRIMARY_100: #49c171;
+$PRIMARY_200: #67cb88;
+$PRIMARY_300: #85d5a0;
+$PRIMARY_400: #a4e0d8;
+$PRIMARY_500: #c2ead0;
+$PRIMARY_600: #0a1e11;
+
+$SECUNDARY: #93104b;
+$SECUNDARY_100: #810e42;
+$SECUNDARY_200: #6e0c38;
+$SECUNDARY_300: #5c0a2f;
+$SECUNDARY_400: #490826;
+$SECUNDARY_500: #37061c;
+
+$BLACK: #000;
+$WHITE: #fff;
+$WHITE_OPACITY_10: rgba(255, 255, 255, 0.1);
+
+/*|---------------| BREAKPOINTS|---------------*/
+
+// Usage example:  @media #{$BREAKPOINT-DESK}
+$BREAKPOINT-DESK: "only screen and (max-width: 1280px)";
+$BREAKPOINT-TABLET-LAND: "only screen and (max-width: 975px)";
+$BREAKPOINT-TABLET: "only screen and (max-width: 768px)";
+$BREAKPOINT-MOBILE-LAND: "only screen and (max-width: 480px)";
+$BREAKPOINT-MOBILE-SMALL: "only screen and (max-width: 300px)";
+
+/*|---------------|MIXINS|---------------*/
+@mixin container-page {
+  display: flex;
+  margin: 0 auto;
+  min-width: 100vw;
+  min-height: 100vh;
+
+  //   @media #{$BREAKPOINT-DESK} {
+  //     max-width: 100vw;
+  //   }
+}
+
+/*|---------------|FONTS|---------------*/
+$FONT-SECUNDARY: "Ubuntu, sans-serif;";

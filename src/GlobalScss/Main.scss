@@ -1,0 +1,12 @@
+//Global confs and vars.
+@import "./conf";
+@import "./global.scss";
+
+//Components
+@import "../Components/Menus/styleMenus";
+@import "../Components/Footer/styleFooter";
+
+//Pages
+@import "../Pages/Home/stylesHome";
+@import "../Pages/About/styleAbout";
+@import "../Pages/Contact/styleContact";

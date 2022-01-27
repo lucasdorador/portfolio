@@ -1,0 +1,56 @@
+.mainFooter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.7rem 0;
+  z-index: 1;
+}
+
+.mainFooter a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: $PRIMARY_500;
+  font-size: 1.5rem;
+  margin-left: 2rem;
+  text-decoration: none;
+  text-transform: lowercase;
+  transition: color 0.2s ease-in-out;
+}
+
+.mainFooter a:hover {
+  color: $WHITE;
+}
+
+.mainFooter a i {
+  opacity: 0;
+  font-size: 16px;
+  margin-left: 5px;
+  margin-top: 1px;
+}
+
+.mainFooter a:hover i {
+  transition: opacity 0.2s ease-in-out;
+  opacity: 1;
+}
+
+@media #{$BREAKPOINT-TABLET} {
+  .mainFooter a span {
+    display: none;
+  }
+
+  .mainFooter a i {
+    opacity: 1;
+    font-size: 24px;
+  }
+}
+
+@media #{$BREAKPOINT-MOBILE-SMALL} {
+  .mainFooter {
+    justify-content: space-around;
+  }
+
+  .mainFooter a {
+    margin-left: 0;
+  }
+}

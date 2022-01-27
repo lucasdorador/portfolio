@@ -1,23 +1,18 @@
-import React from "react";
+import React, { lazy, Suspense } from "react";
 import { Routes, Route } from "react-router-dom";
-import MainRoutes from "../Pages/Main/indexMainRoutes";
-
-// import RotasCadastros from "../pages/RotasCadastros/RotasCadastros";
-// import RotasListagens from "../pages/RotasListagem/RotasListagens";
-
-const pathMain = "/";
+const Home = lazy(() => import("../Pages/Home/indexHome"));
+const About = lazy(() => import("../Pages/About/indexAbout"));
+const Contact = lazy(() => import("../Pages/Contact/indexContact"));
 
 const Routesindex = () => {
   return (
-    <Routes>
-      {/* <Route path="/cadastros" component={RotasCadastros} />
-      <Route path="/listagens" component={RotasListagens} /> */}
-      {/* <Route path="/" element={<Home />} /> */}
-      <Route
-        path={pathMain}
-        element={<MainRoutes match={{ path: pathMain }} />}
-      />
-    </Routes>
+    <Suspense fallback={<div> Oláaaaa </div>}>
+      <Routes>
+        <Route path={"/"} element={<Home />} />
+        <Route path={"/about"} element={<About />} />
+        <Route path={"/contact"} element={<Contact />} />
+      </Routes>
+    </Suspense>
   );
 };
 

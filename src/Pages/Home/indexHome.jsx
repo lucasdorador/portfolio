@@ -1,29 +1,25 @@
 import React from "react";
-import Styles from "./styles.Home.module.css";
-import Images from "../../Components/Images/index.Images";
-import lucas_home from "../../Assets/lucas_home.jpg";
-import logoLinkedin from "../../Assets/linkedin.png";
 import Menus from "../../Components/Menus/index.Menus";
+import Footer from "../../Components/Footer/indexFooter";
 
 function Home() {
   return (
-    <div className={Styles.container}>
-      <div className={Styles.bodyContainer}>
-        <Menus />
-        <div className={Styles.divImageText}>
-          <Images src={lucas_home} />
-          <p className={Styles.titlePresentation}>Olá, eu sou o Lucas!</p>
-          <p className={Styles.titleSecundaryPresentation}>
-            Desenvolvedor FullStack, trabalhando para transformar ideias em
-            código.
+    <div className="MainPageContainer">
+      <Menus />
+      <div className="bodyContainer">
+        <div className="post-content">
+          <h1>Lucas Dorador Fornaciari</h1>
+          <p>
+            <strong>
+              Desenvolvedor Web FullStack nas linguagens:
+              <span> NodeJs, React (Javascript e Typescript) e NextJs.</span>
+            </strong>
+            <br />
+            Trabalhando para transformar ideias em código.
           </p>
-          <div className={Styles.divSocial}>
-            <a href="https://www.linkedin.com/in/lucasdorador/">
-              <Images src={logoLinkedin} width="3.5rem" height="3.5rem" />
-            </a>
-          </div>
         </div>
       </div>
+      <Footer />
     </div>
   );
 }

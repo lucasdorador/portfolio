@@ -47,7 +47,7 @@
   height: 25rem !important;
 }
 
-.carrerBox {
+.careerBox {
   display: flex;
   color: $WHITE;
   flex-direction: column;
@@ -58,23 +58,23 @@
   line-height: 2.2rem;
 }
 
-.carrerBox strong {
+.careerBox strong {
   font-size: 2rem;
   font-weight: 800;
 }
 
-.carrerBox span {
+.careerBox span {
   margin: 0;
 }
 
-.carrerBox a {
+.careerBox a {
   color: $WHITE;
   text-decoration: none;
   font-weight: 500;
   transition: color 0.2s ease-in-out;
 }
 
-.carrerBox p {
+.careerBox p {
   font-size: 1.6rem;
   color: $WHITE;
 }
@@ -104,11 +104,11 @@
     font-size: 1rem;
   }
 
-  .carrerBox strong {
+  .careerBox strong {
     font-size: 1.2rem;
   }
 
-  .carrerBox p {
+  .careerBox p {
     font-size: 1rem;
   }
 }

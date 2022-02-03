@@ -2,10 +2,18 @@ import React from "react";
 import Menus from "../../Components/Menus/index.Menus";
 import Footer from "../../Components/Footer/indexFooter";
 import Image from "../../Components/Images/index.Images";
-import Carrers from "./carrer.json";
-// import { Container } from './styles';
+import { useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
+import { getAllDataAbout } from "../../store/About/action";
 
 function About() {
+  const dispatch = useDispatch();
+  const dataAbout = useSelector((state) => state.reducerAbout);
+
+  React.useEffect(() => {
+    dispatch(getAllDataAbout());
+  }, []);
+
   return (
     <div className="MainPageContainer">
       <Menus />
@@ -18,7 +26,8 @@ function About() {
         <div className="aboutBox">
           <Image radius="2rem" src={"https://github.com/lucasdorador.png"} />
           <span>
-            <strong>Olá</strong> meu nome é Lucas e me considero um apaixonado
+            {dataAbout.biography}
+            {/* <strong>Olá</strong> meu nome é Lucas e me considero um apaixonado
             por tecnologia! Estou cada vez em busca de mais conhecimento,
             principalmente na área de desenvolvimento web, mobile e desktop, que
             sempre foram o meu maior foco profissionalmente. <br />
@@ -42,23 +51,26 @@ function About() {
             gratificante. Procuro cada vez mais melhorar o relacionamento com as
             pessoas para poder trabalhar em um grupo harmônico, pois acredito
             que sem isso não exista sucesso. Estou sempre aberto para ouvir
-            novas ideias, opiniões e trabalhar em novos projetos.
+            novas ideias, opiniões e trabalhar em novos projetos.*/}
           </span>
         </div>
-        <div className="carrerContent">
+        <div className="careerContent">
           <p className="title">Carreira</p>
 
-          {Carrers.map((carrer, idx) => (
-            <div className="carrerBox" key={idx}>
-              <strong>{carrer.occupation}</strong>
-              <span>
-                <a href={`${carrer.urlCompany}`}>{carrer.company}</a>
-                {" • "}
-                {carrer.city}
-              </span>
-              <p>{carrer.period}</p>
-            </div>
-          ))}
+          {dataAbout &&
+            dataAbout.career &&
+            dataAbout.career.length > 0 &&
+            dataAbout.career.map((career, idx) => (
+              <div className="careerBox" key={idx}>
+                <strong>{career.occupation}</strong>
+                <span>
+                  <a href={`${career.urlCompany}`}>{career.company}</a>
+                  {" • "}
+                  {career.city}
+                </span>
+                <p>{career.period}</p>
+              </div>
+            ))}
         </div>
       </div>
       <Footer />
